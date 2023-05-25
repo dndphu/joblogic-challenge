@@ -32,7 +32,6 @@ const itemActive = ref(employees.value[0])
       </div>
     </div>
     <div class="home__banner">
-      <!-- <img src="@/assets/images/header/godfather.jpg" alt="header-banner" /> -->
     </div>
     <div class="home__content">
       <div class="profile">
@@ -105,13 +104,6 @@ html {
     }
   }
   &__banner {
-    // width: 100%;
-    // height: $height;
-    // img {
-    //   height: inherit;
-    //   width: 100%;
-    //   object-fit: cover;
-    // }
 
     display: flex;
     justify-content: center;
