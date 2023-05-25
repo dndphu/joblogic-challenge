@@ -24,7 +24,7 @@ const itemActive = ref(employees.value[0])
             ]"
             v-for="(item, index) in employees"
             :key="index"
-            :style="`font-size:${item.popularity * 10}px`"
+            :style="`font-size:${item.popularity * 8}px`"
           >
             {{ item?.name }}
           </li>
@@ -32,7 +32,7 @@ const itemActive = ref(employees.value[0])
       </div>
     </div>
     <div class="home__banner">
-      <img src="@/assets/images/header/godfather.jpg" alt="header-banner" />
+      <!-- <img src="@/assets/images/header/godfather.jpg" alt="header-banner" /> -->
     </div>
     <div class="home__content">
       <div class="profile">
@@ -62,7 +62,7 @@ const itemActive = ref(employees.value[0])
 
 <style scoped lang="scss">
 $height: 30vh;
-$width-side-bar: 300px;
+$width-side-bar: 320px;
 html {
   font-family: 'Roboto';
 }
@@ -88,7 +88,7 @@ html {
     }
     &__list {
       color: #ffffff;
-      margin-top: 40px;
+      margin-top: 30px;
       &--item {
         &.active {
           background-color: #3d3f44;
@@ -105,14 +105,32 @@ html {
     }
   }
   &__banner {
+    // width: 100%;
+    // height: $height;
+    // img {
+    //   height: inherit;
+    //   width: 100%;
+    //   object-fit: cover;
+    // }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
     width: 100%;
     height: $height;
-    img {
-      height: inherit;
-      width: 100%;
-      object-fit: cover;
-    }
+    overflow: hidden;
+    background-size: cover !important;
 
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 80%,
+        rgba(0, 0, 0, 0.65) 100%
+      ),
+      url('assets/images/header/godfather.jpg') no-repeat center center scroll;
+    background-position-y: 25%;
   }
   &__content {
     background-color: #2a2b31;
@@ -130,8 +148,8 @@ html {
         max-width: 1100px;
       }
       &__avatar {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
         border: 1px solid #ffffff;
         img {
           width: inherit;
@@ -139,6 +157,7 @@ html {
       }
       &__content {
         padding: 0 20px;
+        padding-left: 40px;
         .name,
         .popularity {
           color: #ffffff;
@@ -148,11 +167,11 @@ html {
             margin-right: 10px;
           }
           progress {
-            width: calc(100% - 158px);
+            width: calc(100% - 110px);
           }
         }
         .popularity {
-          margin-top: 20px;
+          margin-top: 40px;
         }
         .description {
           h2 {
@@ -163,7 +182,7 @@ html {
           margin-top: 20px;
           color: #ffffff;
           background-color: #12171f;
-          padding: 10px;
+          padding: 16px;
           line-height: 1.2;
         }
       }
