@@ -171,11 +171,12 @@ html {
             font-size: 22px;
             font-weight: 500;
           }
-          margin-top: 20px;
+          margin-top: 40px;
           color: #ffffff;
           background-color: #12171f;
           padding: 16px;
           line-height: 1.2;
+          border-radius: 4px;
         }
       }
     }
