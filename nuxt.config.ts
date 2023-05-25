@@ -14,4 +14,5 @@ export default defineNuxtConfig({
   alias: {
     images: fileURLToPath(new URL('./assets/images', import.meta.url)),
   },
+  css: ['@/assets/css/main.scss'],
 })

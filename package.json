@@ -10,6 +10,8 @@
   },
   "devDependencies": {
     "@types/node": "^18",
-    "nuxt": "^3.5.1"
+    "nuxt": "^3.5.1",
+    "sass": "^1.49.0",
+    "sass-loader": "^13.2.0"
   }
 }
